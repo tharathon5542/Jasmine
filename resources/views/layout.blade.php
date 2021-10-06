@@ -67,12 +67,6 @@
                     Manage Video
                 </a>
             </li>
-            <li class="link">
-                <a href="{{ route('test') }}">
-                    <ion-icon name="add-circle-outline"></ion-icon>
-                    Test
-                </a>
-            </li>
             @endif
         </ul>
     </div>

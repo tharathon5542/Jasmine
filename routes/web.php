@@ -75,4 +75,4 @@ Route::get('/videoSearch', [VideoSearch::class, 'index'])->name('videoSearch');
 
 Route::get('/videoSearchKey', [VideoSearch::class, 'search'])->name('videoSearchKeyword');
 
-Route::get('/test', [IndexController::class, 'test'])->name('test');
+Route::get('/englishPlayBoxGames/{unit?}/{subUnit?}', [IndexController::class, 'GamesShow'])->name('englishPlayBoxGames');

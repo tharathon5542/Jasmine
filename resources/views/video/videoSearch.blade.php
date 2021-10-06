@@ -6,7 +6,7 @@
 <div class="search-container">
     <h4>Search</h4>
     <form action=" {{ route('videoSearchKeyword') }} ">
-        <input type="text" id="input_keyword" name="input_keyword" placeholder="Video Tile, Video Description" maxlength="50">
+        <input type="text" id="input_keyword" name="input_keyword" placeholder="Video Title, Video Description" maxlength="50">
         <button>
             <ion-icon name="search-outline"></ion-icon>
         </button>

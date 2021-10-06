@@ -795,13 +795,59 @@ table.manage-video td form button:hover {
 .iframe-container {
     width: 100%;
     height: 700px;
-
 }
 
-.iframe-container iframe{
+.iframe-container iframe {
     width: 100%;
     height: 100%;
     overflow-y: hidden;
+}
+
+.index-content-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.index-content-container-column{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.index-content-container a {
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: rgb(22, 22, 22);
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.index-content-container-column a{
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: rgb(22, 22, 22);
+    border-radius: 5px;
+    padding: 20px;
+    width: fit-content;
+    min-width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.index-content-container a:hover,
+.index-content-container-column a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(43, 43, 43);
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.index-content-container-column a.active{
+    background: rgb(43, 43, 43);
 }
 
 /* ------------------------------------------------------------------------------------------- */

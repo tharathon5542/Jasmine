@@ -2,6 +2,15 @@
 
 @section('content')
 
+<h2>Hello {{ session('firstName') }} {{ session('lastName') }}</h2>
+<br>
+
+<h4>Our Contents</h4>
+<div class="index-content-container">
+    <a href="{{ route('englishPlayBoxGames', [1,1]) }}">English Play Box 1 Games</a>
+    <a href="{{ route('videoByCategory', 44) }}">Tale</a>
+</div><br>
+
 <h4>Recent Upload</h4>
 <div class="cards-container">
     @foreach($recentUpload as $key => $value)
