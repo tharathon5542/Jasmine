@@ -102,6 +102,7 @@ class VideoController extends Controller
 
         $sameCategoryData = DB::table('videos')->select('videoID', 'videoName', 'videoDescription', 'image', 'created_at')
             ->where([['categoryID', '=', $video->categoryID], ['videoID', '!=', $video->videoID]])
+            ->inRandomOrder()
             ->paginate(4);
 
         $profileID = session()->get('profileID');

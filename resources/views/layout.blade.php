@@ -52,6 +52,12 @@
                 </a>
             </li>
             @endif
+            <li class="link">
+                <a href="{{ route('englishPlayBoxGames', [1,1]) }}" class="{{ Session::get('activeMenu') === 'games' ? 'active' : '' }}">
+                    <ion-icon name="game-controller-outline"></ion-icon>
+                    English Play Box 1
+                </a>
+            </li>
             <hr>
 
             @if( session('is_admin') == '1' )

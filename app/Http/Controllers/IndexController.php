@@ -222,15 +222,13 @@ class IndexController extends Controller
             }
         }
 
-
-
-
-
         $data = [
             'unit' => $unit,
             'subUnit' => $subUnit,
             'game' => $game
         ];
+
+        session()->put('activeMenu',  'games');
 
         return view('englishPlayboxGames')->with($data);
     }

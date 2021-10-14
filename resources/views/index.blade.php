@@ -2,7 +2,9 @@
 
 @section('content')
 
-<h2>Hello {{ session('firstName') }} {{ session('lastName') }}</h2>
+@if( session('token') )
+    <h2>Hello {{ session('firstName') }} {{ session('lastName') }}</h2>
+@endif
 <br>
 
 <h4>Our Contents</h4>
