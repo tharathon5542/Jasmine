@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Files;
-use Illuminate\Support\Facades\Storage;
-
 
 class DownloadController extends Controller
 {
@@ -15,6 +13,9 @@ class DownloadController extends Controller
 
         $downloadFile = public_path() . '/files/' . $file->file;
 
-        return response()->download($downloadFile);
+        $fileExtend = explode('.', $file->file);
+        $Name = $file->fileName . '.' . $fileExtend[1];
+
+        return response()->download($downloadFile, $Name);
     }
 }

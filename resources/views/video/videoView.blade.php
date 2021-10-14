@@ -4,8 +4,8 @@
 
 <div class="video-container">
     <div class="video-view">
-        <video id="example_video_1" controls preload="auto" height="500" width="800" style="background: #000;">
-            <source src="{{ URL::to('/') }}/videos/{{ $video->videoFile }}" type="video/mp4">
+        <video id="example_video_1" controls autoplay preload="auto" height="500" width="800" style="background: #000;">
+            <source src="{{ route('stream', $video->videoFile) }}" type="video/mp4">
             Your browser does not support HTML video.
         </video>
         <h3>{{ $video->videoName }}</h3>

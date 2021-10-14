@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Index;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Includes\VideoStream;
 
 class IndexController extends Controller
 {
@@ -231,5 +231,12 @@ class IndexController extends Controller
         session()->put('activeMenu',  'games');
 
         return view('englishPlayboxGames')->with($data);
+    }
+
+    public function streamVideo($v)
+    {
+        $video_path = public_path() . "/videos/" . $v;
+        $stream = new VideoStream($video_path);
+        $stream->start();
     }
 }

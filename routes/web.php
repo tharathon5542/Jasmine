@@ -11,7 +11,6 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\VideoByCategoryController;
 use App\Http\Controllers\VideoSearch;
-use App\Http\Controllers\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,3 +75,5 @@ Route::get('/videoSearch', [VideoSearch::class, 'index'])->name('videoSearch');
 Route::get('/videoSearchKey', [VideoSearch::class, 'search'])->name('videoSearchKeyword');
 
 Route::get('/englishPlayBoxGames/{unit?}/{subUnit?}', [IndexController::class, 'GamesShow'])->name('englishPlayBoxGames');
+
+Route::get('/stream/{v}', [IndexController::class, 'streamVideo'])->name('stream');
