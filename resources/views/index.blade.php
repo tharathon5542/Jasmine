@@ -3,9 +3,18 @@
 @section('content')
 
 @if( session('token') )
-    <h2>Hello {{ session('firstName') }} {{ session('lastName') }}</h2>
-@endif
+<div class="profile-header">
+    <div class="profile-image">
+        <img src="{{ URL::to('/') }}/image/{{ session('image') }}" alt="profileImage" width="500px">
+    </div>
+    <div class="profile-name">
+        <p style="font-size: 40px;">Hello! </p>
+        <p style="font-size: 25px; opacity: 80%;">{{ session('firstName') }} {{ session('lastName') }}</p>
+    </div>
+</div>
 <br>
+@endif
+
 
 <h4>Our Contents</h4>
 <div class="index-content-container">

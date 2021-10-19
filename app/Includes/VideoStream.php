@@ -1,11 +1,4 @@
 <?php
-/**
- *  * Description of VideoStream
- *   *
- *    * @author Rana
- *     * @link http://codesamplez.com/programming/php-html5-video-streaming-t...
- *      */
-
 namespace App\Includes;
 
 class VideoStream
@@ -22,9 +15,6 @@ class VideoStream
 		$this->path = $filePath;
 	}
 
-	/**
-	 *      * Open stream
-	 *           */
 	private function open()
 	{
 		if (!($this->stream = fopen($this->path, 'rb'))) {
@@ -33,9 +23,6 @@ class VideoStream
 
 	}
 
-	/**
-	 *      * Set proper header to serve the video content
-	 *           */
 	private function setHeader()
 	{
 		ob_get_clean();
@@ -88,18 +75,12 @@ class VideoStream
 
 	}
 
-	/**
-	 *      * close curretly opened stream
-	 *           */
 	private function end()
 	{
 		fclose($this->stream);
 		exit;
 	}
 
-	/**
-	 *      * perform the streaming of calculated range
-	 *           */
 	private function stream()
 	{
 		$i = $this->start;
@@ -116,9 +97,6 @@ class VideoStream
 		}
 	}
 
-	/**
-	 *      * Start streaming video content
-	 *           */
 	function start()
 	{
 		$this->open();

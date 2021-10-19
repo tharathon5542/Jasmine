@@ -142,6 +142,12 @@
                         Website
                     </a>
                 </li>
+                <li>
+                    <a href="https://github.com/tharathon5542" target="blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Git Hub
+                    </a>
+                </li>
             </ul>
             <p>This Website Made by Tharathon Tippayasotti 601463017 Computer Science CRRU 2021 With Laravel 8 Framework</p>
         </div>
